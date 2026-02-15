@@ -2,20 +2,39 @@
 #include <vector>
 using namespace std;
 
-void dfs(int node, vector<vector<int>>& adj, vector<bool>& visited) {
-    visited[node] = true;
-    cout << node << " ";
+class DFS
+{
+public:
+	//param node: the current node being visited
+	//param adj: the adjacency list representation of the graph
+	//param visited: a boolean vector to keep track of visited nodes
 
-    for (int neighbor : adj[node]) {
-        if (!visited[neighbor]) {
-            dfs(neighbor, adj, visited);
-        }
-    }
-}
+	void dfs(int node, vector<vector<int>>& adj, vector<bool>& visited)
+	{
+		visited[node] = true;
+		cout << node << " ";
 
-//int main() {
+		for (int neighbor : adj[node])
+		{
+			if (!visited[neighbor])
+			{
+				dfs(neighbor, adj, visited);
+			}
+		}
+	}
+
+
+
+};
+
+
+//int main() 
+// {
 //    int n = 5;
+// 
 //    vector<vector<int>> adj(n);
+// 
+//	  DFS DFSObj;
 //
 //    // Undirected Graph
 //    adj[0] = { 1, 2 };
@@ -26,6 +45,6 @@ void dfs(int node, vector<vector<int>>& adj, vector<bool>& visited) {
 //
 //    vector<bool> visited(n, false);
 //
-//    cout << "DFS Traversal: ";
-//    dfs(0, adj, visited);
+//    cout << "DFS : ";
+//    DFSObj.dfs(0, adj, visited);
 //}

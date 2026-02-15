@@ -3,66 +3,66 @@
 #include <queue>
 using namespace std;
 
-void bfs(int start, vector<vector<int>>& adj, int n) {
-    vector<bool> visited(n, false);
-    queue<int> q;
+class BFS
+{
+public:
 
-    visited[start] = true;
-    q.push(start);
+	//param start: the starting node for BFS traversal
+	//param adj: the adjacency list representation of the graph
+	void bfs(int start, vector<vector<int>>& adj, int n)
+	{
+		// Create a visited array to keep track of visited nodes
+		vector<bool> isVisited(n, false);
 
-    while (!q.empty()) {
-        int node = q.front();
-        q.pop();
-        cout << node << " ";
+		// Create a queue for BFS traversal
+		queue<int> queue;
 
-        for (int neighbor : adj[node]) {
-            if (!visited[neighbor]) {
-                visited[neighbor] = true;
-                q.push(neighbor);
-            }
-        }
-    }
-}
+		isVisited[start] = true;
 
+		queue.push(start);
 
-#include <iostream>
-#include <vector>
-#include <queue>
-using namespace std;
+		while (!queue.empty()) 
+		{
+			
+			int node = queue.front();
+			queue.pop();
+			cout << node << " ";
 
-void bfs(int start, vector<vector<int>>& adj, int n) {
-    vector<bool> visited(n, false);
-    queue<int> q;
+			for (int neighbor : adj[node])
+			{
+				if (!isVisited[neighbor])
+				{
+					isVisited[neighbor] = true;
+					queue.push(neighbor);
+				}
+			}
+		}
+	}
 
-    visited[start] = true;
-    q.push(start);
+};
 
-    while (!q.empty()) {
-        int node = q.front();
-        q.pop();
-        cout << node << " ";
-
-        for (int neighbor : adj[node]) {
-            if (!visited[neighbor]) {
-                visited[neighbor] = true;
-                q.push(neighbor);
-            }
-        }
-    }
-}
-
-//int main() {
-//    int n = 5;
-//    vector<vector<int>> adj(n);
+//int main()
+//{
 //
-//    adj[0] = { 1, 2 };
-//    adj[1] = { 0, 3 };
-//    adj[2] = { 0, 4 };
-//    adj[3] = { 1 };
-//    adj[4] = { 2 };
+//	int n = 7;
+//	BFS bfsObj;
+//	vector<vector<int>> adj(n);
 //
-//    cout << "BFS Traversal: ";
-//    bfs(0, adj, n);
-//}
+//	adj[0] = { 1, 2 };
+//	adj[1] = { 0, 3 , 6 };
+//	adj[2] = { 0, 4 , 5 };
+//	adj[3] = { 1 };
+//	adj[4] = { 2 };
+//	adj[5] = { 2 };
+//	adj[6] = { 1 };
+//
+//	cout << "BFS : ";
+//	bfsObj.bfs(0, adj, n);
+//
+//
+//};
+
+
+
 
 

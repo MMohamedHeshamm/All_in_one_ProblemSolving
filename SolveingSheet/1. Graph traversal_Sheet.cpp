@@ -1,5 +1,5 @@
 #include <vector>
-#include<queue>
+#include <queue>
 using namespace std;
 
 
@@ -179,11 +179,57 @@ public:
 
 
 	//3- Find if Path Exists in Graph - LeetCode
+
+	bool validPath(int n, vector<vector<int>>& edges, int source, int destination)
+	{
+			// if source and destination are the same, we can return true immediately
+			if (source == destination) return true;
+
+			// 1) Build adjacency list
+			vector<vector<int>> adj(n);
+
+			for (auto& e : edges)
+			{
+				int u = e[0];
+				int v = e[1];
+
+				adj[u].push_back(v);
+				adj[v].push_back(u); // undirected graph
+			}
+
+			// 2) BFS to find if there is a path from source to destination
+			vector<bool> visited(n, false);
+			queue<int> q;
+
+			q.push(source);
+			visited[source] = true;
+
+			while (!q.empty())
+			{
+				int node = q.front();
+				q.pop();
+
+				if (node == destination) return true;
+
+				for (int neighbor : adj[node])
+				{
+					if (!visited[neighbor])
+					{
+						visited[neighbor] = true;
+						q.push(neighbor);
+					}
+				}
+			}
+
+			// finding the destination		
+			 return false;
+	}
+
+
 	
 
 		
-	};
-	
+};
 
 
 

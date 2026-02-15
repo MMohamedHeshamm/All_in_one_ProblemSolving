@@ -24,7 +24,7 @@
     <ProjectGuid>{80e2cfde-28ea-41dd-85d7-5a9ddc32f549}</ProjectGuid>
     <RootNamespace>SolveingSheet</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>SolveSheet</ProjectName>
+    <ProjectName>All_in_one_ProblemSolving</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -128,17 +128,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="1. Graph traversal.cpp" />
-    <ClCompile Include="10. Learning Outcome 4.cpp" />
-    <ClCompile Include="11. Learning Outcome 5.cpp" />
-    <ClCompile Include="2. DFS.cpp" />
-    <ClCompile Include="3. Dikjistra.cpp" />
-    <ClCompile Include="4. Complete Search.cpp" />
-    <ClCompile Include="5. Binary search.cpp" />
-    <ClCompile Include="6. Merge Sort.cpp" />
-    <ClCompile Include="7. Dynamic Programming.cpp" />
-    <ClCompile Include="8. GreedyAlgorithm.cpp" />
-    <ClCompile Include="9. Learning outcome 3.cpp" />
+    <ClCompile Include="1. Graph traversal_Sheet.cpp" />
+    <ClCompile Include="10. Learning Outcome 4_Sheet.cpp" />
+    <ClCompile Include="11. Learning Outcome 5_Sheet.cpp" />
+    <ClCompile Include="2. DFS_Sheet.cpp" />
+    <ClCompile Include="3. Dikjistra_Sheet.cpp" />
+    <ClCompile Include="4. Complete Search_Sheet.cpp" />
+    <ClCompile Include="5. Binary search_Sheet.cpp" />
+    <ClCompile Include="6. Merge Sort_Sheet.cpp" />
+    <ClCompile Include="7. Dynamic Programming_Sheet.cpp" />
+    <ClCompile Include="8. GreedyAlgorithm_Sheet.cpp" />
+    <ClCompile Include="9. Learning outcome 3_Sheet.cpp" />
     <ClCompile Include="Adjacency List.cpp" />
     <ClCompile Include="Adjacency Matrix.cpp" />
     <ClCompile Include="BFS.cpp" />

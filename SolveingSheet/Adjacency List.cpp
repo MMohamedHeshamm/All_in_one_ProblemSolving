@@ -2,35 +2,50 @@
 #include <vector>
 using namespace std;
 
-// Undirected Graph
-vector<vector<int>> buildAdjList(int n, vector<pair<int, int>>& edges) {
+// n: number of vertices
+// edges: list of edges
+vector<vector<int>> buildAdjList(int n, const vector<pair<int, int>>& edges)
+{
     vector<vector<int>> adj(n);
 
-    for (auto edge : edges) {
-        int u = edge.first;
-        int v = edge.second;
+    for (int i = 0; i < edges.size(); i++)
+    {
+        int u = edges[i].first;
+        int v = edges[i].second;
 
         adj[u].push_back(v);
-        adj[v].push_back(u); // شيلها لو الجراف Directed
+        adj[v].push_back(u);   // remove this line if graph is directed
     }
 
     return adj;
 }
 
-
-
-//int main() {
-//    int n = 5;
-//    vector<pair<int, int>> edges = {
-//        {0,1}, {0,2}, {1,3}, {2,4}
+//int main()
+//{
+//    int n = 4;
+//
+//    vector<pair<int, int>> edges =
+//    {
+//        {0,1},
+//        {0,2},
+//        {1,3}
 //    };
 //
-//    vector<vector<int>> adj = buildAdjList(n, edges);
+//    vector<vector<int>> graph = buildAdjList(n, edges);
 //
-//    for (int i = 0; i < n; i++) {
-//        cout << i << ": ";
-//        for (int v : adj[i])
-//            cout << v << " ";
+//    cout << "Adjacency List:\n";
+//
+//    for (int i = 0; i < n; i++)
+//    {
+//        cout << i << " -> ";
+//
+//        for (int neighbor : graph[i])
+//        {
+//            cout << neighbor << " ";
+//        }
+//
 //        cout << endl;
 //    }
+//
+//    return 0;
 //}

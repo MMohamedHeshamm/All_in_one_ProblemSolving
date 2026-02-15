@@ -9,7 +9,7 @@ vector<vector<int>> buildAdjMatrix(int n, vector<pair<int, int>>& edges) {
         int v = edge.second;
 
         matrix[u][v] = 1;
-        matrix[v][u] = 1; // شيلها لو Directed
+		matrix[v][u] = 1; //if graph is directed, remove this line
     }
 
     return matrix;

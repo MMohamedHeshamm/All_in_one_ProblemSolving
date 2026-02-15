@@ -40,34 +40,34 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="2. DFS.cpp">
+    <ClCompile Include="2. DFS_Sheet.cpp">
       <Filter>Source Files\Sheet</Filter>
     </ClCompile>
-    <ClCompile Include="3. Dikjistra.cpp">
+    <ClCompile Include="3. Dikjistra_Sheet.cpp">
       <Filter>Source Files\Sheet</Filter>
     </ClCompile>
-    <ClCompile Include="4. Complete Search.cpp">
+    <ClCompile Include="4. Complete Search_Sheet.cpp">
       <Filter>Source Files\Sheet</Filter>
     </ClCompile>
-    <ClCompile Include="5. Binary search.cpp">
+    <ClCompile Include="5. Binary search_Sheet.cpp">
       <Filter>Source Files\Sheet</Filter>
     </ClCompile>
-    <ClCompile Include="6. Merge Sort.cpp">
+    <ClCompile Include="6. Merge Sort_Sheet.cpp">
       <Filter>Source Files\Sheet</Filter>
     </ClCompile>
-    <ClCompile Include="7. Dynamic Programming.cpp">
+    <ClCompile Include="7. Dynamic Programming_Sheet.cpp">
       <Filter>Source Files\Sheet</Filter>
     </ClCompile>
-    <ClCompile Include="8. GreedyAlgorithm.cpp">
+    <ClCompile Include="8. GreedyAlgorithm_Sheet.cpp">
       <Filter>Source Files\Sheet</Filter>
     </ClCompile>
-    <ClCompile Include="9. Learning outcome 3.cpp">
+    <ClCompile Include="9. Learning outcome 3_Sheet.cpp">
       <Filter>Source Files\Sheet</Filter>
     </ClCompile>
-    <ClCompile Include="10. Learning Outcome 4.cpp">
+    <ClCompile Include="10. Learning Outcome 4_Sheet.cpp">
       <Filter>Source Files\Sheet</Filter>
     </ClCompile>
-    <ClCompile Include="11. Learning Outcome 5.cpp">
+    <ClCompile Include="11. Learning Outcome 5_Sheet.cpp">
       <Filter>Source Files\Sheet</Filter>
     </ClCompile>
     <ClCompile Include="Edge List.cpp">
@@ -94,7 +94,7 @@
     <ClCompile Include="Merge Sort.cpp">
       <Filter>Source Files\PS\Week 4</Filter>
     </ClCompile>
-    <ClCompile Include="1. Graph traversal.cpp">
+    <ClCompile Include="1. Graph traversal_Sheet.cpp">
       <Filter>Source Files\Sheet</Filter>
     </ClCompile>
     <ClCompile Include="Complete Search.cpp">
