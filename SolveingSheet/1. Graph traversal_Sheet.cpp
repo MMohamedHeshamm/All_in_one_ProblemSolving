@@ -226,9 +226,51 @@ public:
 	}
 
 
-	
+	//4- Minimum Score of a Path Between Two Cities - LeetCode
+	#pragma region 4
+	int minScore1 = INT_MAX;
 
-		
+	void dfs(int city, vector<vector<pair<int, int>>>& adj, vector<bool>& visited)
+	{
+		visited[city] = true;
+
+		for (auto& neighbor : adj[city]) {
+			int nextCity = neighbor.first;
+			int distance = neighbor.second;
+
+
+			minScore1 = min(minScore1, distance);
+
+			if (!visited[nextCity])
+			{
+				dfs(nextCity, adj, visited);
+			}
+		}
+	}
+	int minScore(int n, vector<vector<int>>& roads) {
+		vector<vector<pair<int, int>>> adj(n + 1);
+
+
+		for (auto& road : roads) {
+			int a = road[0];
+			int b = road[1];
+			int dist = road[2];
+
+			adj[a].push_back({ b, dist });
+			adj[b].push_back({ a, dist });
+		}
+
+		vector<bool> visited(n + 1, false);
+
+		dfs(1, adj, visited);
+
+		return minScore1;
+	}
+
+
+	#pragma endregion
+
+	
 };
 
 
