@@ -254,7 +254,6 @@ public:
 
 
 	//4- Minimum Score of a Path Between Two Cities - LeetCode
-	#pragma region 4
 	int minScore1 = INT_MAX;
 
 	void dfs(int city, vector<vector<pair<int, int>>>& adj, vector<bool>& visited)
@@ -295,7 +294,22 @@ public:
 		return minScore1;
 	}
 
+#pragma region Main
 
+	/*int main() {
+		int n = 4;
+
+		vector<vector<int>> roads = {
+			{1, 2, 9},
+			{2, 3, 6},
+			{2, 4, 5},
+			{1, 4, 7}
+		};
+
+		cout << "Minimum Score = " << minScore(n, roads) << endl;
+
+		return 0;
+	}*/
 	#pragma endregion
 
 	
