@@ -180,49 +180,76 @@ public:
 
 	//3- Find if Path Exists in Graph - LeetCode
 
-	bool validPath(int n, vector<vector<int>>& edges, int source, int destination)
-	{
-			// if source and destination are the same, we can return true immediately
-			if (source == destination) return true;
+	bool dfs(int node, int destination, vector<vector<int>>& adj, vector<bool>& visited) {
+		if (node == destination)
+			return true;
 
-			// 1) Build adjacency list
-			vector<vector<int>> adj(n);
+		visited[node] = true;
 
-			for (auto& e : edges)
-			{
-				int u = e[0];
-				int v = e[1];
-
-				adj[u].push_back(v);
-				adj[v].push_back(u); // undirected graph
+		for (int neighbor : adj[node]) {
+			if (!visited[neighbor]) {
+				if (dfs(neighbor, destination, adj, visited))
+					return true;
 			}
+		}
 
-			// 2) BFS to find if there is a path from source to destination
-			vector<bool> visited(n, false);
-			queue<int> q;
+		return false;
+	}
 
-			q.push(source);
-			visited[source] = true;
+	bool validPath(int n, vector<vector<int>>& edges, int source, int destination) {
 
-			while (!q.empty())
-			{
-				int node = q.front();
-				q.pop();
+		vector<vector<int>> adj(n);
 
-				if (node == destination) return true;
+		for (auto& e : edges) {
+			int u = e[0], v = e[1];
+			adj[u].push_back(v);
+			adj[v].push_back(u);
+		}
 
-				for (int neighbor : adj[node])
-				{
-					if (!visited[neighbor])
-					{
-						visited[neighbor] = true;
-						q.push(neighbor);
-					}
-				}
-			}
+		vector<bool> visited(n, false);
 
-			// finding the destination		
-			 return false;
+		//node 0 -> visited[0]=true
+
+		return dfs(source, destination, adj, visited);
+
+
+
+
+
+
+
+#pragma region Main 
+
+		//int n = 6;
+
+		//vector<vector<int>> edges = {
+		//	{0,1},
+		//	{0,2},
+		//	{3,5},
+		//	{5,4},
+		//	{4,3}
+		//};
+
+		//int source = 0;
+		//int destination = 5;
+
+		//if (validPath(n, edges, source, destination))
+		//	cout << "Path exists ✅" << endl;
+		//else
+		//	cout << "No path ❌" << endl;
+
+		//return 0;
+
+
+#pragma endregion
+
+
+
+
+
+
+
+
 	}
 
 
