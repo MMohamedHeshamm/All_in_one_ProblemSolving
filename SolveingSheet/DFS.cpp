@@ -12,7 +12,7 @@ public:
 	void dfs(int node, vector<vector<int>>& adj, vector<bool>& visited)
 	{
 		visited[node] = true;
-		cout << node << " ";
+		cout << node << "  ";
 
 		for (int neighbor : adj[node])
 		{

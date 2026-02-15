@@ -234,7 +234,8 @@ public:
 	{
 		visited[city] = true;
 
-		for (auto& neighbor : adj[city]) {
+		for (auto& neighbor : adj[city]) 
+		{
 			int nextCity = neighbor.first;
 			int distance = neighbor.second;
 
