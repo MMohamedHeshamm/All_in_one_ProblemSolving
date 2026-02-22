@@ -13,23 +13,13 @@
 #include "11. Learning Outcome 5_Sheet.cpp"
 #include "BFS.cpp"
 #include "DFS.cpp"
+#include "Adjacency List.cpp"
 using namespace std;
 
 
 int main()
 {
-	CompSearch CS;
-	    vector<int> nums = { 1, 2, 3 };
-	    vector<vector<int>> result = CS.subsets(nums);
-	
-	    cout << "Subsets:\n";
-	    for (const auto& subset : result) {
-	        cout << "[ ";
-	        for (int num : subset) cout << num << " ";
-	        cout << "]\n";
-	    }
-	
-	    return 1;
+	//khaled
 	
 
 }
