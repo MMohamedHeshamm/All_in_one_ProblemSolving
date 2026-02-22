@@ -180,14 +180,16 @@ public:
 
 	//3- Find if Path Exists in Graph - LeetCode
 
-	bool dfs(int node, int destination, vector<vector<int>>& adj, vector<bool>& visited) {
-		if (node == destination)
+	bool dfs(int source, int destination, vector<vector<int>>& adj, vector<bool>& visited) {
+		if (source == destination)
 			return true;
 
-		visited[node] = true;
+		visited[source] = true;
 
-		for (int neighbor : adj[node]) {
-			if (!visited[neighbor]) {
+		for (int neighbor : adj[source]) 
+		{
+			if (!visited[neighbor]) 
+			{
 				if (dfs(neighbor, destination, adj, visited))
 					return true;
 			}
@@ -196,12 +198,15 @@ public:
 		return false;
 	}
 
-	bool validPath(int n, vector<vector<int>>& edges, int source, int destination) {
+	bool validPath(int n, vector<vector<int>>& edges, int source, int destination) 
+	{
 
 		vector<vector<int>> adj(n);
 
-		for (auto& e : edges) {
-			int u = e[0], v = e[1];
+		for (auto& e : edges) // edge[0]
+		{
+			int u = e[0];
+			int v = e[1];
 			adj[u].push_back(v);
 			adj[v].push_back(u);
 		}
@@ -213,14 +218,9 @@ public:
 		return dfs(source, destination, adj, visited);
 
 
-
-
-
-
-
 #pragma region Main 
 
-		//int n = 6;
+		//int n = 8;
 
 		//vector<vector<int>> edges = {
 		//	{0,1},
@@ -228,12 +228,24 @@ public:
 		//	{3,5},
 		//	{5,4},
 		//	{4,3}
+		// 
+		// 
+		// --------
+		// 
+		// {0,1}, 1
+		// {0,2}, 2
+		// {1,3}, 3
+		// {3,6}, 4
+		// {4,5}, 5
+		// {2,4}, 6
+		// 
+		// 
 		//};
 
 		//int source = 0;
-		//int destination = 5;
+		//int destination = 4;
 
-		//if (validPath(n, edges, source, destination))
+		//if (7(n, edges, source, destination))
 		//	cout << "Path exists ✅" << endl;
 		//else
 		//	cout << "No path ❌" << endl;

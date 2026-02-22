@@ -1,64 +1,79 @@
 #include <iostream>
-#include <vector>
-#include <climits>
 using namespace std;
 
-class Dijkstra
+int minDistance(int dist[], bool sptSet[], int V)
 {
- public:
-    //calculate the shortest path from start node to all other nodes in the graph
-    vector<int> dijkstra(vector<vector<int>> graph, int start) {
+    int min = INT_MAX, min_index = -1;
 
-        int n = graph.size();
+    for (int v = 0; v < V; v++)
+    {
+        if (!sptSet[v] && dist[v] <= min)
+        {
+            min = dist[v];
+            min_index = v;
+        }
+    }
+    return min_index;
+}
 
-        vector<int> dist(n, INT_MAX);
-        vector<bool> visited(n, false);
+void printSolution(int dist[], int V)
+{
+    cout << "Vertex   Distance from Source\n";
+    for (int i = 0; i < V; i++)
+        cout << i << "\t\t" << dist[i] << endl;
+}
 
-        dist[start] = 0;
+void dijkstra(int** graph, int V, int src)
+{
+    int* dist = new int[V];
+    bool* sptSet = new bool[V];
 
-        for (int i = 0; i < n; i++) {
+    for (int i = 0; i < V; i++)
+    {
+        dist[i] = INT_MAX;
+        sptSet[i] = false;
+    }
 
-            int u = -1;
+    dist[src] = 0;
 
-            //choose the unvisited node with the smallest distance
-            for (int j = 0; j < n; j++) {
-                if (!visited[j] && (u == -1 || dist[j] < dist[u])) {
-                    u = j;
-                }
-            }
+    for (int count = 0; count < V - 1; count++)
+    {
+        int u = minDistance(dist, sptSet, V);
+        sptSet[u] = true;
 
-            visited[u] = true;
-
-            for (int v = 0; v < n; v++) {
-
-                if (graph[u][v] != 0) {
-
-                    if (dist[u] + graph[u][v] < dist[v]) {
-                        dist[v] = dist[u] + graph[u][v];
-                    }
-                }
+        for (int v = 0; v < V; v++)
+        {
+            if (!sptSet[v] && graph[u][v] &&
+                dist[u] != INT_MAX &&
+                dist[u] + graph[u][v] < dist[v])
+            {
+                dist[v] = dist[u] + graph[u][v];
             }
         }
-
-        return dist;
     }
-};
 
-//int main() {
-// 
-//    dijkstra DijkstraObj;
+    printSolution(dist, V);
+
+    delete[] dist;
+    delete[] sptSet;
+}
+
+
+//int main()
+//{
+//    int V = 5;  // هنا تحدد الحجم اللي انت عايزه
 //
-//    vector<vector<int>> graph = {
-//        {0, 4, 1, 0},
-//        {4, 0, 2, 5},
-//        {1, 2, 0, 8},
-//        {0, 5, 8, 0}
-//    };
+//    // إنشاء الجراف
+//    int** graph = new int* [V];
+//    for (int i = 0; i < V; i++)
+//        graph[i] = new int[V];
 //
-//    vector<int> result = DijkstraObj.dijkstra(graph, 0);
+//    // مثال تعبئة القيم
+//    graph[0][1] = 10;
+//    graph[1][2] = 5;
+//    // ... كمل باقي القيم
 //
-//    cout << "Shortest distances:\n";
-//    for (int i = 0; i < result.size(); i++) {
-//        cout << result[i] << " ";
-//    }
+//    dijkstra(graph, V, 0);
+//
+//    return 0;
 //}

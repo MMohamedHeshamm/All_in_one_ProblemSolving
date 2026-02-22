@@ -18,21 +18,18 @@ using namespace std;
 
 int main()
 {
-
-	int n = 7;
-		BFS bfsObj;
-		vector<vector<int>> adj(n);
+	CompSearch CS;
+	    vector<int> nums = { 1, 2, 3 };
+	    vector<vector<int>> result = CS.subsets(nums);
 	
-		adj[0] = { 1, 2 };
-		adj[1] = { 0, 3 , 6 };
-		adj[2] = { 0, 4 , 5 };
-		adj[3] = { 1 };
-		adj[4] = { 2 };
-		adj[5] = { 2 };
-		adj[6] = { 1 };
+	    cout << "Subsets:\n";
+	    for (const auto& subset : result) {
+	        cout << "[ ";
+	        for (int num : subset) cout << num << " ";
+	        cout << "]\n";
+	    }
 	
-		cout << "BFS : ";
-		bfsObj.bfs(0, adj, n);
+	    return 0;
 	
 
 }
