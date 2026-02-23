@@ -14,12 +14,20 @@
 #include "BFS.cpp"
 #include "DFS.cpp"
 #include "Adjacency List.cpp"
+#include "Factorial (Memoization).cpp"
 using namespace std;
 
 
 int main()
 {
-	//Mohamed
-	
+	int n = 6;
+	FactorialMemoization object;
 
-}
+	vector<long long > memo(n + 1, -1);
+
+	cout << "Factorial of " << n << " = "
+		<< object.factorial(n, memo) << endl;
+
+	return 0;
+
+};

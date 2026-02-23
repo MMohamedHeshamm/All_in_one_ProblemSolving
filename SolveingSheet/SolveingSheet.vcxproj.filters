@@ -100,5 +100,14 @@
     <ClCompile Include="Complete Search.cpp">
       <Filter>Source Files\PS\Week 3</Filter>
     </ClCompile>
+    <ClCompile Include="Factorial (Memoization).cpp">
+      <Filter>Source Files\PS\Week 5</Filter>
+    </ClCompile>
+    <ClCompile Include="Fibonacci.cpp">
+      <Filter>Source Files\PS\Week 5</Filter>
+    </ClCompile>
+    <ClCompile Include="Factorial (Tabulation).cpp">
+      <Filter>Source Files\PS\Week 5</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

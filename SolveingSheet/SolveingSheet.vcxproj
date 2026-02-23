@@ -147,6 +147,9 @@
     <ClCompile Include="DFS.cpp" />
     <ClCompile Include="Dijkstra.cpp" />
     <ClCompile Include="Edge List.cpp" />
+    <ClCompile Include="Factorial (Memoization).cpp" />
+    <ClCompile Include="Factorial (Tabulation).cpp" />
+    <ClCompile Include="Fibonacci.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Merge Sort.cpp" />
   </ItemGroup>
