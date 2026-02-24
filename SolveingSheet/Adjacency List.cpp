@@ -4,21 +4,27 @@ using namespace std;
 
 // n: number of vertices
 // edges: list of edges
-vector<vector<int>> buildAdjList(int n, const vector<pair<int, int>>& edges)
+class adjlist
 {
-    vector<vector<int>> adj(n);
-
-    for (int i = 0; i < edges.size(); i++)
+public:
+    vector<vector<int>> buildAdjList(int n, const vector<pair<int, int>>& edges)
     {
-        int u = edges[i].first;
-        int v = edges[i].second;
+        vector<vector<int>> adj(n);
 
-        adj[u].push_back(v);
-        adj[v].push_back(u);   // remove this line if graph is directed
+        for (int i = 0; i < edges.size(); i++)
+        {
+            int u = edges[i].first;
+            int v = edges[i].second;
+
+            adj[u].push_back(v);
+            adj[v].push_back(u);   // remove this line if graph is directed
+        }
+
+        return adj;
     }
 
-    return adj;
-}
+};
+
 
 //int main()
 //{

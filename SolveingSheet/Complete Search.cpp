@@ -30,3 +30,10 @@ void completeSearch(vector<int>& arr, vector<int>& current, int index) {
 //
 //    completeSearch(arr, current, 0);
 //}
+
+
+
+//-------------------------------------------------
+
+
+

@@ -147,8 +147,16 @@
     <ClCompile Include="DFS.cpp" />
     <ClCompile Include="Dijkstra.cpp" />
     <ClCompile Include="Edge List.cpp" />
+    <ClCompile Include="Factorial (Memoization).cpp" />
+    <ClCompile Include="Factorial (Tabulation).cpp" />
+    <ClCompile Include="Fibonacci.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Merge Sort.cpp" />
+    <ClCompile Include="Rod Cutting.cpp" />
+    <ClCompile Include="Rod_Cutting.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RodCutting.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

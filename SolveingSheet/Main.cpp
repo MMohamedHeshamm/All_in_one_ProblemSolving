@@ -13,6 +13,8 @@
 #include "11. Learning Outcome 5_Sheet.cpp"
 #include "BFS.cpp"
 #include "DFS.cpp"
+#include "Adjacency List.cpp"
+#include "Factorial (Memoization).cpp"
 using namespace std;
 
 
