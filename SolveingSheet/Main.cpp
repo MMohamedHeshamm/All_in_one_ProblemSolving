@@ -16,23 +16,21 @@
 using namespace std;
 
 
-int main()
-{
+int main() {
+    int rod_Length;
+    DP db;
 
-	int n = 7;
-		BFS bfsObj;
-		vector<vector<int>> adj(n);
-	
-		adj[0] = { 1, 2 };
-		adj[1] = { 0, 3 , 6 };
-		adj[2] = { 0, 4 , 5 };
-		adj[3] = { 1 };
-		adj[4] = { 2 };
-		adj[5] = { 2 };
-		adj[6] = { 1 };
-	
-		cout << "BFS : ";
-		bfsObj.bfs(0, adj, n);
-	
+    cout << "Enter the Rod length: ";
+    cin >> rod_Length;
 
+    vector<int> prices(rod_Length+1,0);
+    cout << "Enter the prices for lengths 1 to " << rod_Length << ": ";
+    for (int i = 1; i <= rod_Length; i++) {
+        cin >> prices[i];
+    }
+
+    int Max_profit = db.rodCutting(prices, rod_Length);
+    cout << "Maximum profit obtainable: " << Max_profit << endl;
+
+    return 0;
 }
