@@ -114,8 +114,16 @@ public:
 #pragma endregion
 
 //vector to store trust score for each person but start from 1 to n
-		vector<int> trustScore(n + 1, 0);
+		int j = trust[0][1];
+		for (auto& t : trust) {
+			if (j != t[1])
+				return -1;
+		}
+		return j;
 
+
+
+		vector<int> trustScore(n + 1, 0);
 		// Update trust score based on the trust relationships
 		for (auto& t : trust) {
 			int a = t[0]; // a trusts b
@@ -345,7 +353,46 @@ public:
 	}*/
 	#pragma endregion
 
-	
+	//6-cycle
+	//5- cycle
+	bool dfs(int node, int parent, vector<vector<int>>& adj, vector<bool>& visited) {
+		visited[node] = true;
+
+		for (int neighbor : adj[node]) {
+			if (!visited[neighbor]) {
+				if (dfs(neighbor, node, adj, visited))
+					return true;
+			}
+			else if (neighbor != parent) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	bool hasCycle(int n, vector<vector<int>>& edges) {
+		vector<vector<int>> adj(n);
+
+
+		for (auto& e : edges) {
+			int u = e[0];
+			int v = e[1];
+			adj[u].push_back(v);
+			adj[v].push_back(u);
+		}
+
+		vector<bool> visited(n, false);
+
+
+		for (int i = 0; i < n; i++) {
+			if (!visited[i]) {
+				if (dfs(i, -1, adj, visited))
+					return true;
+			}
+		}
+
+		return false;
+	}
 };
 
 
