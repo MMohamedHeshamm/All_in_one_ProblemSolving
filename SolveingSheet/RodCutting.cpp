@@ -14,7 +14,6 @@ public:
         // Fill the C table
         for (int i = 1; i <= rodLength; i++) {
             for (int k = 1; k <= i; k++) {
-
                 C[i] = max(C[i], prices[k] + C[i - k]);
             }
         }
