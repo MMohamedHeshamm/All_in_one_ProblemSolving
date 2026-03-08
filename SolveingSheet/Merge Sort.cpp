@@ -3,7 +3,8 @@
 using namespace std;
 
 
-void mergeSubarrays(int low, int mid, int high, vector<int>& nums) {
+void mergeSubarrays(int low, int mid, int high, vector<int>& nums) 
+{
     if (low >= high) return;
 
     int l = low, r = mid + 1, k = 0, size = high - low + 1;
@@ -23,8 +24,10 @@ void mergeSubarrays(int low, int mid, int high, vector<int>& nums) {
 }
 
 // Merge Sort main function (recursive)
-void mergeSort(vector<int>& nums, int start, int end) {
-    if (start < end) {
+void mergeSort(vector<int>& nums, int start, int end) 
+{
+    if (start < end)
+    {
         int mid = start + (end - start) / 2;
         mergeSort(nums, start, mid);
         mergeSort(nums, mid + 1, end);
@@ -33,7 +36,8 @@ void mergeSort(vector<int>& nums, int start, int end) {
 }
 
 // Function to sort the array (entry point)
-vector<int> sortArray(vector<int>& nums) {
+vector<int> sortArray(vector<int>& nums)
+{
     mergeSort(nums, 0, nums.size() - 1);
     return nums;
 }
