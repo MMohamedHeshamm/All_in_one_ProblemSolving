@@ -40,6 +40,9 @@
     <Filter Include="Source Files\PS\Week 7">
       <UniqueIdentifier>{45c5cb04-3727-4210-908d-a4bb7502bdde}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\PS\Week 8">
+      <UniqueIdentifier>{7a0b5e58-3f87-4f81-b7e1-47213138ec56}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -118,11 +121,14 @@
     <ClCompile Include="Coins.cpp">
       <Filter>Source Files\PS\Week 7</Filter>
     </ClCompile>
+    <ClCompile Include="Binary Exponentiation.cpp">
+      <Filter>Source Files\PS\Week 8</Filter>
+    </ClCompile>
     <ClCompile Include="GCD.cpp">
-      <Filter>Source Files\PS\Week 7</Filter>
+      <Filter>Source Files\PS\Week 8</Filter>
     </ClCompile>
     <ClCompile Include="LCM.cpp">
-      <Filter>Source Files\PS\Week 7</Filter>
+      <Filter>Source Files\PS\Week 8</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

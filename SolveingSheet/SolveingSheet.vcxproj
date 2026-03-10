@@ -143,6 +143,7 @@
     <ClCompile Include="Adjacency List.cpp" />
     <ClCompile Include="Adjacency Matrix.cpp" />
     <ClCompile Include="BFS.cpp" />
+    <ClCompile Include="Binary Exponentiation.cpp" />
     <ClCompile Include="BinarySearch.cpp" />
     <ClCompile Include="Coins.cpp" />
     <ClCompile Include="Complete Search.cpp" />

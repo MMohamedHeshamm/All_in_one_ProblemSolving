@@ -8,8 +8,10 @@ LCM(a,b)= ∣a×b∣/GCD(a,b)
 using namespace std;
 
 // Recursive GCD using Euclidean Algorithm
-int gcd_recursive(int a, int b) {
-    if (b == 0) {
+int gcd_recursive(int a, int b) 
+{
+    if (b == 0) 
+    {
         return a;
     }
     return gcd_recursive(b, a % b);
@@ -17,7 +19,8 @@ int gcd_recursive(int a, int b) {
 
 
 // Function to compute LCM using GCD
-int lcm(int a, int b) {
+int lcm(int a, int b) 
+{
     //  return (a / gcd_recursive(a, b)) * b;  // Prevents overflow
 
     return (a * b) / gcd_recursive(a, b);  // Prevents overflow
