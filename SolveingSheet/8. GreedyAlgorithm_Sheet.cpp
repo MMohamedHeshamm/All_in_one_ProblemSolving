@@ -78,7 +78,7 @@ public:
         }
 
         // sort by start time
-        sort(jobs.begin(), jobs.end());
+        sort(jobs.begin(), jobs.end(),0);
 
         // extract all start times
         vector<int> starts;
@@ -103,13 +103,14 @@ public:
     }
 };
 
-int main() {
+int main() 
+{
     vector<int> startTime = { 1, 2, 3, 3 };
     vector<int> endTime = { 3, 4, 5, 6 };
     vector<int> profit = { 50, 10, 40, 70 };
 
     Q2 obj;
-    int ans = obj.jobScheduling(startTime, endTime, profit);
+    int ans = obj.jobScheduling( startTime, endTime, profit);
 
     cout << "Maximum Profit = " << ans << endl;
 

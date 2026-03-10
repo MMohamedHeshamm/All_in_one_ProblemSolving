@@ -37,6 +37,9 @@
     <Filter Include="Source Files\PS\Week 6">
       <UniqueIdentifier>{37e58490-7976-4719-acdd-7ff86de43813}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\PS\Week 7">
+      <UniqueIdentifier>{45c5cb04-3727-4210-908d-a4bb7502bdde}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -108,6 +111,18 @@
     </ClCompile>
     <ClCompile Include="Factorial (Tabulation).cpp">
       <Filter>Source Files\PS\Week 5</Filter>
+    </ClCompile>
+    <ClCompile Include="Activity Selection (CPU Scheduling).cpp">
+      <Filter>Source Files\PS\Week 7</Filter>
+    </ClCompile>
+    <ClCompile Include="Coins.cpp">
+      <Filter>Source Files\PS\Week 7</Filter>
+    </ClCompile>
+    <ClCompile Include="GCD.cpp">
+      <Filter>Source Files\PS\Week 7</Filter>
+    </ClCompile>
+    <ClCompile Include="LCM.cpp">
+      <Filter>Source Files\PS\Week 7</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

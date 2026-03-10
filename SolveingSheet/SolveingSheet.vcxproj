@@ -139,10 +139,12 @@
     <ClCompile Include="7. Dynamic Programming_Sheet.cpp" />
     <ClCompile Include="8. GreedyAlgorithm_Sheet.cpp" />
     <ClCompile Include="9. Learning outcome 3_Sheet.cpp" />
+    <ClCompile Include="Activity Selection (CPU Scheduling).cpp" />
     <ClCompile Include="Adjacency List.cpp" />
     <ClCompile Include="Adjacency Matrix.cpp" />
     <ClCompile Include="BFS.cpp" />
     <ClCompile Include="BinarySearch.cpp" />
+    <ClCompile Include="Coins.cpp" />
     <ClCompile Include="Complete Search.cpp" />
     <ClCompile Include="DFS.cpp" />
     <ClCompile Include="Dijkstra.cpp" />
@@ -150,6 +152,8 @@
     <ClCompile Include="Factorial (Memoization).cpp" />
     <ClCompile Include="Factorial (Tabulation).cpp" />
     <ClCompile Include="Fibonacci.cpp" />
+    <ClCompile Include="GCD.cpp" />
+    <ClCompile Include="LCM.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Merge Sort.cpp" />
   </ItemGroup>
