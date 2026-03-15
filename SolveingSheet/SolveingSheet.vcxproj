@@ -128,15 +128,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\..\..\Desktop\LO4\1-Dot_cross_Product.cpp" />
-    <ClCompile Include="..\..\..\..\..\..\Desktop\LO4\2-Complex_numbers.cpp" />
-    <ClCompile Include="..\..\..\..\..\..\Desktop\LO4\3-complex_numbers_operations.cpp" />
-    <ClCompile Include="..\..\..\..\..\..\Desktop\LO4\4-Line_equation.cpp" />
-    <ClCompile Include="..\..\..\..\..\..\Desktop\LO4\5-lines_Intersection.cpp" />
-    <ClCompile Include="..\..\..\..\..\..\Desktop\LO4\6-point_check.cpp" />
-    <ClCompile Include="..\..\..\..\..\..\Desktop\LO4\7-point_check_using_cross.cpp" />
-    <ClCompile Include="..\..\..\..\..\..\Desktop\LO4\8-Circle_equation.cpp" />
-    <ClCompile Include="..\..\..\..\..\..\Desktop\LO4\9-Line_circle.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\drive-download-20260315T064424Z-1-001\1-Dot_cross_Product.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\drive-download-20260315T064424Z-1-001\2-Complex_numbers.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\drive-download-20260315T064424Z-1-001\3-complex_numbers_operations.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\drive-download-20260315T064424Z-1-001\4-Line_equation.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\drive-download-20260315T064424Z-1-001\5-lines_Intersection.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\drive-download-20260315T064424Z-1-001\6-point_check.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\drive-download-20260315T064424Z-1-001\7-point_check_using_cross.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\drive-download-20260315T064424Z-1-001\8-Circle_equation.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\drive-download-20260315T064424Z-1-001\9-Line_circle.cpp" />
     <ClCompile Include="1. Graph traversal_Sheet.cpp" />
     <ClCompile Include="10. Learning Outcome 4_Sheet.cpp" />
     <ClCompile Include="11. Learning Outcome 5_Sheet.cpp" />
