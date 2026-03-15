@@ -128,6 +128,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\..\Desktop\LO4\1-Dot_cross_Product.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\LO4\2-Complex_numbers.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\LO4\3-complex_numbers_operations.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\LO4\4-Line_equation.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\LO4\5-lines_Intersection.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\LO4\6-point_check.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\LO4\7-point_check_using_cross.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\LO4\8-Circle_equation.cpp" />
+    <ClCompile Include="..\..\..\..\..\..\Desktop\LO4\9-Line_circle.cpp" />
     <ClCompile Include="1. Graph traversal_Sheet.cpp" />
     <ClCompile Include="10. Learning Outcome 4_Sheet.cpp" />
     <ClCompile Include="11. Learning Outcome 5_Sheet.cpp" />
@@ -150,6 +159,7 @@
     <ClCompile Include="DFS.cpp" />
     <ClCompile Include="Dijkstra.cpp" />
     <ClCompile Include="Edge List.cpp" />
+    <ClCompile Include="Extended Euclidean.cpp" />
     <ClCompile Include="Factorial (Memoization).cpp" />
     <ClCompile Include="Factorial (Tabulation).cpp" />
     <ClCompile Include="Fibonacci.cpp" />
@@ -157,6 +167,7 @@
     <ClCompile Include="LCM.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Merge Sort.cpp" />
+    <ClCompile Include="Sieve_prime.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RodCutting.cpp" />

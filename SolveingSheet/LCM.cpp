@@ -10,6 +10,8 @@ using namespace std;
 // Recursive GCD using Euclidean Algorithm
 int gcd_recursive(int a, int b) 
 {
+  
+    
     if (b == 0) 
     {
         return a;
