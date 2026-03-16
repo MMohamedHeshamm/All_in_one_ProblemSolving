@@ -4,27 +4,32 @@
 using namespace std;
 
 // Function to compute dot product of two 2D vectors
-double dotProduct( vector<double> a,  vector<double> b) {
+double dotProduct( vector<double> a,  vector<double> b) 
+{
     return a[0] * b[0] + a[1] * b[1];
 }
 
 // Function to compute cross product of two 2D vectors (returns scalar value)
-double crossProduct_2D( vector<double> a,  vector<double> b) {
+double crossProduct_2D( vector<double> a,  vector<double> b)
+{
     return a[0] * b[1] - a[1] * b[0];
 }
 
 
 
 // Function to compute cross product of two 3D vectors (returns a 3D vector)
-vector<double> crossProduct_3D( vector<double> a,  vector<double> b) {
-    return {
+vector<double> crossProduct_3D( vector<double> a,  vector<double> b) 
+{
+    return 
+    {
         a[1] * b[2] - a[2] * b[1],  // x-component
         a[2] * b[0] - a[0] * b[2],  // y-component
         a[0] * b[1] - a[1] * b[0]   // z-component
     };
 }
 
-int main() {
+int main() 
+{
     vector<double> v1(2), v2(2);
     
     cout << "Enter the first vector (x y): ";

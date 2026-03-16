@@ -3,8 +3,11 @@ using namespace std;
 
 // Function to find the intersection point of two lines y = m1*x + c1 and y = m2*x + c2
 void findIntersection(double m1, double c1, double m2, double c2) {
+
+
     // Check if the lines are parallel
-    if (m1 == m2) { 
+    if (m1 == m2) 
+    { 
 
         // If intercepts are also the same, the lines coincide
         if (c1 == c2) 
@@ -14,7 +17,8 @@ void findIntersection(double m1, double c1, double m2, double c2) {
         else 
             cout << "The lines are parallel and do not intersect." << endl;
 
-        return; // Exit the function
+        // Exit the function
+        return; 
     }
 
     // Calculate intersection point using the formula x = (c2 - c1) / (m1 - m2)
