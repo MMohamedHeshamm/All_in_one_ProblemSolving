@@ -46,6 +46,9 @@
     <Filter Include="Source Files\PS\Week 9">
       <UniqueIdentifier>{86b79640-d11e-4a59-a422-4314fa82ed05}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\PS\Week 10">
+      <UniqueIdentifier>{140916fa-c614-4227-8c8b-b1343661295a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -165,6 +168,12 @@
     </ClCompile>
     <ClCompile Include="9-Line_circle.cpp">
       <Filter>Source Files\PS\Week 9</Filter>
+    </ClCompile>
+    <ClCompile Include="LCP_SORT.cpp">
+      <Filter>Source Files\PS\Week 10</Filter>
+    </ClCompile>
+    <ClCompile Include="LCP_BruteForce.cpp">
+      <Filter>Source Files\PS\Week 10</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

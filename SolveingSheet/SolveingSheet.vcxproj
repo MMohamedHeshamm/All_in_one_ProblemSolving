@@ -165,6 +165,8 @@
     <ClCompile Include="Fibonacci.cpp" />
     <ClCompile Include="GCD.cpp" />
     <ClCompile Include="LCM.cpp" />
+    <ClCompile Include="LCP_BruteForce.cpp" />
+    <ClCompile Include="LCP_SORT.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Merge Sort.cpp" />
     <ClCompile Include="Sieve_prime.cpp" />
