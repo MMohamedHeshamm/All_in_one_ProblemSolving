@@ -178,6 +178,9 @@
     <ClCompile Include="KMP.cpp">
       <Filter>Source Files\PS\Week 10</Filter>
     </ClCompile>
+    <ClCompile Include="RabinKarp.cpp">
+      <Filter>Source Files\PS\Week 10</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RodCutting.cpp">
