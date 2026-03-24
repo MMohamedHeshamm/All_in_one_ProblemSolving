@@ -164,6 +164,7 @@
     <ClCompile Include="Factorial (Tabulation).cpp" />
     <ClCompile Include="Fibonacci.cpp" />
     <ClCompile Include="GCD.cpp" />
+    <ClCompile Include="KMP.cpp" />
     <ClCompile Include="LCM.cpp" />
     <ClCompile Include="LCP_BruteForce.cpp" />
     <ClCompile Include="LCP_SORT.cpp" />

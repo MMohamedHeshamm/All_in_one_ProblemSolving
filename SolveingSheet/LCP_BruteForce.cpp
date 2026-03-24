@@ -5,7 +5,7 @@ using namespace std;
 string longestCommonPrefix(vector<string>& strs)
 {
 	if (strs.empty())
-		return "";
+		return "This is an empty Vector";
 
 	string prefix = strs[0];  // Start with the first word
 
@@ -14,10 +14,11 @@ string longestCommonPrefix(vector<string>& strs)
 
 		// Compare with each word
 
-		int j = 0;// to iterate over charachters
-		while (j < prefix.size() && j < strs[i].size() && prefix[j] == strs[i][j])
+		int Counter = 0;// to iterate over charachters
+		while (Counter < prefix.size() && Counter < strs[i].size() 
+			&& prefix[Counter] == strs[i][Counter])
 		{
-			j++;
+			Counter++;
 		}
 
 
@@ -36,11 +37,11 @@ string longestCommonPrefix(vector<string>& strs)
 
 		*/
 
-		prefix = prefix.substr(0, j);  // Keep only the common part
+		prefix = prefix.substr(0, Counter);  // Keep only the common part
 
 
 		if (prefix.empty())
-			return "";  // If no common prefix, return empty string
+			return "no Common Prefix";  // If no common prefix, return empty string
 	}
 
 	/*The prefix is updated to the first j characters (prefix.substr(0, j)).
@@ -51,7 +52,8 @@ string longestCommonPrefix(vector<string>& strs)
 	return prefix;
 }
 
-int main() {
+int main() 
+{
 	vector<string> words = { "flower", "flow", "flight" };
 
 

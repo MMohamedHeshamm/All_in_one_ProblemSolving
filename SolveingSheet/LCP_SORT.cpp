@@ -2,23 +2,28 @@
 #include <vector>
 #include <algorithm>
 using namespace std;
-
+//                           strs[0] ,strs[1]  ,strs[2]
+//                         { Flower , flow , flight }
 string longestCommonPrefix(vector<string> strs)
 {
 	//check if the vector is empty or not
 	if (strs.empty())
-		return "";
+		return " this vector is empty ";
+
+	
 
 	sort(strs.begin(), strs.end());  // Sort words alphabetically
 
 	string first = strs[0];
-	string last = strs[strs.size() - 1];
+	string last = strs[strs.size() - 1]; // strs[2]
 	int counter = 0;
-
+	//        0   <                     0    <
 	while (counter < first.size() && counter < last.size() && first[counter] == last[counter])
 	{
 		counter++;
 	}
+	
+	
 	/*
 		for(int i =0; i<first.size()&&last.size() ;i++)
 		{
@@ -43,7 +48,7 @@ string longestCommonPrefix(vector<string> strs)
 int main()
 {
 	vector<string> words = { "flower", "flow", "flight" };
-	vector<string>v;
+
 	/*
 
 			int n;
@@ -53,6 +58,7 @@ int main()
 			}
 
 	*/
+
 	cout << "LCP: " << longestCommonPrefix(words) << endl; // Output: "fl"
 	return 0;
 }
