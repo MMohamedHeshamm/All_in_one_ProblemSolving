@@ -175,6 +175,9 @@
     <ClCompile Include="LCP_BruteForce.cpp">
       <Filter>Source Files\PS\Week 10</Filter>
     </ClCompile>
+    <ClCompile Include="Rabon_Karp.cpp">
+      <Filter>Source Files\PS\Week 10</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="RodCutting.cpp">

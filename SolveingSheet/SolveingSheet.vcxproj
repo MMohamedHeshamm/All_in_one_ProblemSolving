@@ -169,6 +169,7 @@
     <ClCompile Include="LCP_SORT.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Merge Sort.cpp" />
+    <ClCompile Include="Rabon_Karp.cpp" />
     <ClCompile Include="Sieve_prime.cpp" />
   </ItemGroup>
   <ItemGroup>
