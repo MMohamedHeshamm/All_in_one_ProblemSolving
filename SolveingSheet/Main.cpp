@@ -15,24 +15,20 @@
 #include "DFS.cpp"
 #include "Adjacency List.cpp"
 #include "Factorial (Memoization).cpp"
+#include "RabinKarp.cpp"
 using namespace std;
 
 
 int main() {
-    int rod_Length;
-    DP db;
+   
 
-    cout << "Enter the Rod length: ";
-    cin >> rod_Length;
-
-    vector<int> prices(rod_Length+1,0);
-    cout << "Enter the prices for lengths 1 to " << rod_Length << ": ";
-    for (int i = 1; i <= rod_Length; i++) {
-        cin >> prices[i];
-    }
-
-    int Max_profit = db.rodCutting(prices, rod_Length);
-    cout << "Maximum profit obtainable: " << Max_profit << endl;
-
-    return 0;
+	string text = "abcde";
+	    string pattern = "abc";
+	
+	    if (rabinKarpSearch(text, pattern)) {
+	        cout << "Pattern found in text!" << endl;
+	    }
+	    else {
+	        cout << "Pattern NOT found in text!" << endl;
+	    }
 }

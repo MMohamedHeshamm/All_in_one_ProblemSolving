@@ -49,6 +49,9 @@
     <Filter Include="Source Files\PS\Week 10">
       <UniqueIdentifier>{140916fa-c614-4227-8c8b-b1343661295a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\PS\Week 11">
+      <UniqueIdentifier>{04508733-c2ca-4b07-8e24-2ac0849a0359}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -180,6 +183,9 @@
     </ClCompile>
     <ClCompile Include="RabinKarp.cpp">
       <Filter>Source Files\PS\Week 10</Filter>
+    </ClCompile>
+    <ClCompile Include="Find_First_Occurrence.cpp">
+      <Filter>Source Files\PS\Week 11</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

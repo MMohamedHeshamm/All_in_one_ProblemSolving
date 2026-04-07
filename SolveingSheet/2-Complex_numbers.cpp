@@ -15,27 +15,27 @@ void Add_complex(complex<double> num1, complex<double> num2)
 	cout << "the addition=" << num1 + num2;
 
 }
-int main()
-{
-	//complex<double>num1,num2;
-	double real1, real2, imag1, imag2;
-
-	cout << "enter the real part and imag part of number 1:";
-	cin >> real1 >> imag1;
-
-
-	cout << "enter the real part and imag part of number 2:";
-	cin >> real2 >> imag2;
-
-
-	//   num1=complex<double>(real1,imag1);
-	complex<double>num1(real1, imag1);
-	complex<double>num2(real2, imag2);
-
-	Add_complex(num1, num2);
-	return 0;
-}
-
+//int main()
+//{
+//	//complex<double>num1,num2;
+//	double real1, real2, imag1, imag2;
+//
+//	cout << "enter the real part and imag part of number 1:";
+//	cin >> real1 >> imag1;
+//
+//
+//	cout << "enter the real part and imag part of number 2:";
+//	cin >> real2 >> imag2;
+//
+//
+//	//   num1=complex<double>(real1,imag1);
+//	complex<double>num1(real1, imag1);
+//	complex<double>num2(real2, imag2);
+//
+//	Add_complex(num1, num2);
+//	return 0;
+//}
+//
 
 
 

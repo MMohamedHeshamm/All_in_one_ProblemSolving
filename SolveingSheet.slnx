@@ -4,4 +4,5 @@
     <Platform Name="x86" />
   </Configurations>
   <Project Path="SolveingSheet/SolveingSheet.vcxproj" Id="80e2cfde-28ea-41dd-85d7-5a9ddc32f549" />
+  <Project Path="Test/Test.vcxproj" Id="eda56a52-e82e-42de-a37b-99d0b31d6774" />
 </Solution>

@@ -1,92 +1,76 @@
 #include <iostream>
-#include <cmath>
+#include <string>
+#include<cmath>
 using namespace std;
 
-int RabinKarp(string txt, string pattern)
+// Rabin-Karp search function
+bool rabinKarpSearch(const string& text, const string& pattern)
 {
-    int n = txt.size();
-    int m = pattern.size();
+	const int prime = 101;  // Prime number for hashing
+	const int base = 31;    // Base for hash calculation
+	int n = pattern.length();
+	int m = text.length();
 
-    if (m > n) return -1;
+	if (n > m) return false; // If pattern is longer than text, return false
 
-    int Base = 256;
-    int prime = 101;
+	int patternHash = 0, textHash = 0, h = 1;
 
-    long long h = 1;
-    for (int i = 0; i < m - 1; i++) {
-        h = (h * Base) % prime;  // h = pow(Base, m - 1) % prime
-    }
+	// Compute the value of h = base^(patternLen-1) % primeا
 
-    long long pattHash = 0;
-    long long txtHash = 0;
 
-    // Precompute powers and hashes like in your original style
-    for (int i = 0; i < m; i++)
-    {
-        pattHash += (1LL * pattern[i] * ((long long)(pow(Base, m - i - 1)) % prime));
-        pattHash %= prime;
+	h = pow(base, n - 1);
 
-        txtHash += (1LL * txt[i] * ((long long)(pow(Base, m - i - 1)) % prime));
-        txtHash %= prime;
-    }
 
-    for (int i = 0; i <= n - m; i++)
-    {
-        if (pattHash == txtHash)
-        {
-            if (txt.substr(i, m) == pattern)
-                return i;
-        }
 
-        if (i < n - m)
-        {
-            // Update txtHash using the same formula style
-            txtHash = txtHash - ((long long)txt[i] * ((long long)(pow(Base, m - 1)) % prime));
-            txtHash = (txtHash * Base + txt[i + m]) % prime;
+	// ABCDEF -- > 1*31^5 + 2*31^4 + 3*31^3 + 4*31^2 + 5*31^1 + 6*31^0  ( m = 6 )
+	// 
+	// CD --> 3*31^1 + 4*31^0  ( n = 2 )
+	// Compute hash for pattern and first window of text
+	//n --> pattern length
+	for (int i = 0; i < n; i++) 
+	{
+		patternHash = (patternHash * base + (pattern[i] - 'A' + 1)) % prime;
+		textHash = (textHash * base + (text[i] - 'A' + 1)) % prime;
 
-            if (txtHash < 0)
-                txtHash += prime;
-        }
-    }
+	}
 
-    return -1;
+	// Slide the window over the text
+	for (int i = 0; i <= m - n; i++)
+	{
+		// Check if hashes match
+		if (patternHash == textHash)
+		{
+			if (text.substr(i, n) == pattern)
+			{
+				return true;  // Pattern found
+			}
+		}
+
+		// Slide the window: remove first letter, add next letter
+		if (i < m - n)
+		{
+			textHash = (textHash - (text[i] - 'A' + 1) * h) % prime;
+			textHash = (textHash * base + (text[i + n] - 'A' + 1)) % prime;
+
+
+			// Ensure positive hash
+			if (textHash < 0) textHash += prime;
+		}
+	}
+	return false; // Pattern not found
 }
 
-int repeatedStringMatch(string a, string b)
-{
-    string repeated = a;
-    int count = 1;
+int main() {
+	string text = "abcde";
+	string pattern = "abc";
 
-    while (repeated.size() < b.size())
-    {
-        repeated += a;
-        count++;
-    }
+	if (rabinKarpSearch(text, pattern)) {
+		cout << "Pattern found in text!" << endl;
+	}
+	else 
+	{
+		cout << "Pattern NOT found in text!" << endl;
+	}
 
-    if (RabinKarp(repeated, b) != -1)
-        return count;
-
-    repeated += a;
-    count++;
-
-    if (RabinKarp(repeated, b) != -1)
-        return count;
-
-    return -1;
+	return 0;
 }
-
-
-
-int strStr(string haystack, string needle) {
-    return RabinKarp(haystack, needle);
-}
-
-int main()
-{
-    cout << repeatedStringMatch("abcd", "cdabcdab") << endl;  // Output: 3
-    cout << "\n";
-    cout << strStr("HappyOrsad", "Or");                     // Output: 5
-    return 0;
-}
-
-

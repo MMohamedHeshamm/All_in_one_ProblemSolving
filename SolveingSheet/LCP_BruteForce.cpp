@@ -2,10 +2,17 @@
 #include <vector>
 using namespace std;
 
+
+
+//     name of function ( LCP )  paramters -- >  vector<string> { Words }
 string longestCommonPrefix(vector<string>& strs)
 {
+
+	// Check vector if it have any Words or not 
+	// empty return boolen value 
+	// if value true  --> empty vector 
 	if (strs.empty())
-		return "This is an empty Vector";
+		return "";
 
 	string prefix = strs[0];  // Start with the first word
 
@@ -17,7 +24,7 @@ string longestCommonPrefix(vector<string>& strs)
 		int Counter = 0;// to iterate over charachters
 		while (Counter < prefix.size() && Counter < strs[i].size() 
 			&& prefix[Counter] == strs[i][Counter])
-		{
+		{ 
 			Counter++;
 		}
 
