@@ -13,34 +13,34 @@ public:
 		// parameters: edges: a 2D vector representing the edges
 		// like [[1, 2], [1, 3], [1, 4]]
 
-		#pragma region problem description
-		/*
+#pragma region problem description
+/*
 
-		There is an undirected star graph consisting of n nodes
-		labeled from 1 to n.
-		A star graph is a graph where there is one center node
-		and exactly n - 1 edges that connect the center node
-		with every other node.
+There is an undirected star graph consisting of n nodes
+labeled from 1 to n.
+A star graph is a graph where there is one center node
+and exactly n - 1 edges that connect the center node
+with every other node.
 
-		You are given a 2D integer array edges where each edges[i] = [ui, vi]
-		indicates that there is an edge between the nodes ui and vi.
-		Return the center of the given star graph.
+You are given a 2D integer array edges where each edges[i] = [ui, vi]
+indicates that there is an edge between the nodes ui and vi.
+Return the center of the given star graph.
 
-		Constraints:
+Constraints:
 
-		3 <= n <= 105
-		edges.length == n - 1
-		edges[i].length == 2
-		1 <= ui, vi <= n
-		ui != vi
-		The given edges represent a valid star graph.
-		*/
+3 <= n <= 105
+edges.length == n - 1
+edges[i].length == 2
+1 <= ui, vi <= n
+ui != vi
+The given edges represent a valid star graph.
+*/
 
-		#pragma endregion
+#pragma endregion
 
 // لو لقيت ايدج واحده علي الاقل مشتركه فيهم نود واحد يبقي النود ده هو المركز
 
-        // First edge
+		// First edge
 		int a = edges[0][0]; // 1
 		int b = edges[0][1]; //2
 
@@ -60,7 +60,7 @@ public:
 		return b;  // If a is not the center, then b must be the center.
 
 
-		#pragma region Main
+#pragma region Main
 		/*
 
 		   vector<vector<int>> edges = { {1, 2}, {1, 3}, {1, 2} };
@@ -70,7 +70,7 @@ public:
 		   return 0;
 
 		*/
-		#pragma endregion
+#pragma endregion
 
 	}
 
@@ -160,32 +160,32 @@ public:
 		#include <vector>
 		#include "Graph traversal.cpp"
 		using namespace std;
-		
-		
-		int main() 
+
+
+		int main()
 		{
 			// Example 1
 			int n1 = 2;
 			vector<vector<int>> trust1 = { {1,2} };
 			Graph_traversal gt;
 			cout << "Town Judge is: " << gt.findJudge(n1, trust1) << endl; // Output: 2
-		
+
 			// Example 2
 			int n2 = 3;
 			vector<vector<int>> trust2 = { {1,3},{2,3} };
 			cout << "Town Judge is: " << gt.findJudge(n2, trust2) << endl; // Output: 3
-		
+
 			// Example 3
 			int n3 = 3;
-		    vector<vector<int>> trust3 = { {1,3},{2,3},{3,1} };
+			vector<vector<int>> trust3 = { {1,3},{2,3},{3,1} };
 			cout << "Town Judge is: " << gt.findJudge(n3, trust3) << endl; // Output: -1
 
 		}
 		*/
-		
-		
 
-		#pragma endregion
+
+
+#pragma endregion
 
 
 
@@ -209,9 +209,9 @@ public:
 
 		visited[source] = true;
 
-		for (int neighbor : adj[source]) 
+		for (int neighbor : adj[source])
 		{
-			if (!visited[neighbor]) 
+			if (!visited[neighbor])
 			{
 				if (dfs(neighbor, destination, adj, visited))
 					return true;
@@ -221,7 +221,7 @@ public:
 		return false;
 	}
 
-	bool validPath(int n, vector<vector<int>>& edges, int source, int destination) 
+	bool validPath(int n, vector<vector<int>>& edges, int source, int destination)
 	{
 
 		vector<vector<int>> adj(n);
@@ -301,7 +301,7 @@ public:
 	{
 		visited[city] = true;
 
-		for (auto& neighbor : adj[city]) 
+		for (auto& neighbor : adj[city])
 		{
 			int nextCity = neighbor.first;
 			int distance = neighbor.second;
@@ -351,7 +351,7 @@ public:
 
 		return 0;
 	}*/
-	#pragma endregion
+#pragma endregion
 
 	//6-cycle
 	//5- cycle
@@ -366,34 +366,35 @@ public:
 			else if (neighbor != parent) {
 				return true;
 			}
-		}
-		return false;
-	}
-
-	bool hasCycle(int n, vector<vector<int>>& edges) {
-		vector<vector<int>> adj(n);
 
 
-		for (auto& e : edges) {
-			int u = e[0];
-			int v = e[1];
-			adj[u].push_back(v);
-			adj[v].push_back(u);
+			return false;
 		}
 
-		vector<bool> visited(n, false);
+		bool hasCycle(int n, vector<vector<int>>&edges) {
+			vector<vector<int>> adj(n);
 
 
-		for (int i = 0; i < n; i++) {
-			if (!visited[i]) {
-				if (dfs(i, -1, adj, visited))
-					return true;
+			for (auto& e : edges) {
+				int u = e[0];
+				int v = e[1];
+				adj[u].push_back(v);
+				adj[v].push_back(u);
 			}
-		}
 
-		return false;
-	}
-};
+			vector<bool> visited(n, false);
+
+
+			for (int i = 0; i < n; i++) {
+				if (!visited[i]) {
+					if (dfs(i, -1, adj, visited))
+						return true;
+				}
+			}
+
+			return false;
+		}
+	};
 
 
 
