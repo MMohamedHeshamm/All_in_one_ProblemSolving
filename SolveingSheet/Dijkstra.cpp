@@ -9,6 +9,7 @@ using namespace std;
 const int INF = 1e9;  // Define a large constant to represent infinity (unreachable nodes)
 
 // Function to add edges to the graph
+
 void Add(vector<vector<pair<int, int>>>& Graph, int from, int to, int weight, bool IsDirected)
 {
     Graph[from].push_back({ to, weight });  // Add an edge from 'from' to 'to' with the given weight
@@ -19,17 +20,18 @@ void Add(vector<vector<pair<int, int>>>& Graph, int from, int to, int weight, bo
 }
 
 // Function to perform Dijkstra's algorithm
+// Graph , start node, and a vector to store distances from the start node to all other nodes
 void Dijkstra(vector<vector<pair<int, int>>>& Graph, int start, vector<int>& distance)
 {
+	// pair <int, int> → We store {node, distance}. 
+	//vector<pair<int, int>> → The underlying container to hold elements.
+	//greater<> → This tells the priority queue to behave like a min-heap (smallest distance first).
     priority_queue<pair<int, int>, vector<pair<int, int>>, greater<>> queue_w4;
-    /*
-    pair<int, int> → We store {distance, node}.
-    vector<pair<int, int>> → The underlying container to hold elements.
-    greater<> → This tells the priority queue to behave like a min-heap (smallest distance first).
-    */
+    
 
     distance[start] = 0;  // Set the distance of the start node to 0
     queue_w4.push({ start, 0 });  // Push the start node into the priority queue
+    //queue_w4.push({ start, distance[start] });
 
     while (!queue_w4.empty())  // Continue until all nodes are processed
     {
